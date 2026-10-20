@@ -65,6 +65,8 @@ Para geração diária num PC Windows, executa `scripts/agendar_windows.ps1` no 
 
 ## Ligar as redes mais tarde
 
+Para retomar a configuração no PC com as contas existentes, abre **Verificar-PetNova.bat** e segue [LIGAR_CONTAS.md](LIGAR_CONTAS.md). O diagnóstico mostra os componentes disponíveis e a presença das credenciais neste processo; a validade das autorizações é testada depois na respetiva plataforma.
+
 Consulta [AUTOMACAO.md](AUTOMACAO.md). As credenciais pertencem a variáveis de ambiente do processo de publicação; nunca ao HTML, ao catálogo ou a um commit.
 
 Para inspecionar um lote sem rede:
