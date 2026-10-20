@@ -17,6 +17,8 @@ on:
       - 'config/**'
       - 'requirements.txt'
       - '.github/workflows/conteudos.yml'
+      - 'scripts/preparar_galeria.py'
+      - 'scripts/publicar_galeria.py'
 permissions:
   contents: read
 concurrency:
@@ -73,3 +75,26 @@ jobs:
           retention-days: 7
       - name: Resumo
         run: python scripts/resumo_execucao.py
+
+  galeria:
+    name: Atualizar galeria para telemovel
+    needs: criar
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v8.0.2
+        with:
+          name: petnova-conteudos-${{ github.run_id }}
+          path: conteudos/
+      - name: Exportar apenas os ficheiros demonstrativos
+        run: python scripts/preparar_galeria.py
+      - name: Disponibilizar rascunhos na galeria publica
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/publicar_galeria.py

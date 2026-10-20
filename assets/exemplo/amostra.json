@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-20",
+  "mode": "demonstracao",
+  "social_publishing_enabled": false,
+  "bundle_url": "",
+  "posts": [
+    {
+      "id": "2026-10-20-1230-p4",
+      "product_name": "Bebedouro portátil para cães",
+      "hook": "O próximo passeio começa aqui",
+      "scheduled_at": "2026-10-20T12:30:00+01:00",
+      "status": "rascunho",
+      "ai_used": false,
+      "captions": {
+        "tiktok": "O próximo passeio começa aqui\n\nBebedouro portátil para cães — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=2026-10-20-1230-p4\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao",
+        "instagram": "O próximo passeio começa aqui\n\nBebedouro portátil para cães — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=instagram&utm_medium=organic_social&utm_campaign=2026-10-20-1230-p4\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao",
+        "youtube": "O próximo passeio começa aqui\n\nBebedouro portátil para cães — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=youtube&utm_medium=organic_social&utm_campaign=2026-10-20-1230-p4\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao"
+      },
+      "media": {
+        "video": "assets/exemplo/video.mp4",
+        "ad": "assets/exemplo/anuncio.png",
+        "subtitles": "assets/exemplo/legendas.srt"
+      }
+    }
+  ]
+}

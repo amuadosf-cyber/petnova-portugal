@@ -30,9 +30,15 @@ O workflow tenta preparar Ollama e o modelo gratuito **Qwen3 0.6B** no próprio 
 
 O workflow `Criar 2 conteudos diarios (demonstracao)` executa diariamente às **07:17 UTC**, prepara os dois conteúdos para 12:30 e 19:30 de **Europe/Lisbon**, verifica os ficheiros e simula as três redes. Os horários do calendário adaptam-se ao horário de verão; o cron é UTC. São horários de planeamento, **não publicações agendadas nas redes**.
 
-Em **Actions → Criar 2 conteudos diarios → execução → Artifacts**, descarrega o pacote `petnova-conteudos-…`. Inclui vídeos, anúncios, textos, guiões, prompts opcionais e o relatório de simulação. A retenção é de sete dias. O exemplo no estúdio é fixo; não representa o último estado das execuções.
+Em **Actions → Criar 2 conteudos diarios → execução → Artifacts**, descarrega o pacote `petnova-conteudos-…`. Inclui vídeos, anúncios, textos, guiões, prompts opcionais e o relatório de simulação. A retenção é de sete dias. O estúdio procura automaticamente o lote público mais recente. Os MP4 e anúncios são disponibilizados em Releases de demonstração; o índice público fica no ramo `conteudos-publicos`. Há uma amostra fixa para quando o lote recente ainda não está disponível. Estes rascunhos públicos continuam por rever; a galeria não envia nada às redes sociais.
 
 GitHub disponibiliza os runners padrão gratuitamente em repositórios públicos, dentro das suas regras. A execução pode atrasar; num repositório público sem atividade, os agendamentos podem ser desativados após 60 dias. O botão **Run workflow** permite iniciar uma preparação manualmente. Não há subscrições ou APIs pagas neste fluxo.
+
+## Rever pelo telemóvel
+
+Abre o [estúdio](https://amuadosf-cyber.github.io/petnova-portugal/studio.html), escolhe um dos conteúdos e usa o leitor de vídeo. Podes trocar entre as legendas de Instagram, TikTok e YouTube, copiar o texto e descarregar vídeo, anúncio, SRT ou o lote completo. O estúdio indica a data do lote e identifica texto assistido por IA ou por modelo.
+
+O workflow publica somente os ficheiros demonstrativos e um índice de campos permitidos. As credenciais de redes sociais e os registos privados ficam fora da exportação. A atualização da galeria tem um job separado com permissão `contents: write`, que cria uma Release de rascunhos e atualiza o índice; o gerador mantém acesso de leitura. Os vídeos ficam fora do histórico Git de `main`.
 
 ## Executar no Windows ou Linux
 

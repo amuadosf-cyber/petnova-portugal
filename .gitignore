@@ -13,3 +13,5 @@ _site/
 client_secret*.json
 token*.json
 
+
+_galeria/
