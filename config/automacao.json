@@ -1,0 +1,24 @@
+{
+  "brand": "PetNova Portugal",
+  "site_url": "https://amuadosf-cyber.github.io/petnova-portugal/",
+  "store": {
+    "mode": "demonstracao",
+    "checkout_enabled": false,
+    "suppliers_confirmed": false,
+    "payments_configured": false
+  },
+  "content": {
+    "timezone": "Europe/Lisbon",
+    "daily_slots": ["12:30", "19:30"],
+    "video_seconds": 24,
+    "provider": "templates",
+    "ollama_model": "",
+    "ollama_url": "http://127.0.0.1:11434"
+  },
+  "publishing": {
+    "enabled": false,
+    "youtube_privacy": "private",
+    "instagram_api_version": "",
+    "public_media_base": ""
+  }
+}

@@ -1,6 +1,6 @@
-id,nome,categoria,preco_demo_eur,estado
-1,Escova para remover pelos,Gatos,14.90,demonstracao
-2,Brinquedo interativo para gatos,Gatos,12.90,demonstracao
-3,Tapete para comedouros,Caes e gatos,11.90,demonstracao
-4,Bebedouro portatil para caes,Caes,16.90,demonstracao
-5,Removedor de pelos reutilizavel,Casa,9.90,demonstracao
+id,nome,categoria,preco_demo_eur,estado,descricao,tema
+1,Escova para remover pelos,Gatos,14.90,demonstracao,Uma ideia de acessório para a rotina de escovagem.,escovagem
+2,Brinquedo interativo para gatos,Gatos,12.90,demonstracao,Uma ideia para momentos de brincadeira acompanhada.,brincadeira
+3,Tapete para comedouros,Cães e gatos,11.90,demonstracao,Uma ideia para organizar a zona das refeições.,refeicoes
+4,Bebedouro portátil para cães,Cães,16.90,demonstracao,Uma ideia de acessório para levar água nos passeios.,passeio
+5,Removedor de pelos reutilizável,Casa,9.90,demonstracao,Uma ideia de acessório para retirar pelos dos tecidos.,casa

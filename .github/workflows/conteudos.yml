@@ -1,0 +1,51 @@
+name: Criar 2 conteudos diarios (demonstracao)
+on:
+  schedule:
+    - cron: '17 7 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'automacao_conteudos.py'
+      - 'petnova/**'
+      - 'produtos.csv'
+      - 'config/**'
+      - 'requirements.txt'
+      - '.github/workflows/conteudos.yml'
+permissions:
+  contents: read
+concurrency:
+  group: petnova-conteudos-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  criar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Preparar FFmpeg
+        run: |
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y ffmpeg fonts-dejavu-core
+          fi
+      - name: Gerar dois anuncios e videos verticais
+        run: python automacao_conteudos.py
+      - name: Verificar MP4 e simular as tres redes (sem credenciais)
+        run: |
+          python scripts/validar_media.py
+          python scripts/simular_tudo.py
+      - name: Guardar conteudos para descarregar no GitHub Actions
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: petnova-conteudos-${{ github.run_id }}
+          path: conteudos/
+          if-no-files-found: error
+          retention-days: 7
+      - name: Resumo
+        run: python scripts/resumo_execucao.py

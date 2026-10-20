@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+conteudos/
+state/
+*.sqlite3*
+*.log
+_site/
+client_secret*.json
+token*.json
+

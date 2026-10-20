@@ -1,24 +1,40 @@
 <!doctype html>
-<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="PetNova Portugal — acessórios para cães e gatos. Loja em demonstração."><title>PetNova Portugal | Cães e Gatos</title>
-<style>
-:root{--green:#1f684f;--light:#e9f4ec;--ink:#1c3029}*{box-sizing:border-box}body{margin:0;font-family:system-ui,Arial,sans-serif;color:var(--ink);background:#fafaf7}header{padding:18px 6%;background:white;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 1px 8px #0001}h1{font-size:1.6rem;margin:0}header button,.card button{border:0;background:var(--green);color:white;border-radius:9px;padding:11px 16px;cursor:pointer}main{max-width:1150px;margin:auto;padding:0 20px}.hero{background:var(--light);border-radius:22px;margin:28px 0;padding:42px 30px}.hero h2{font-size:clamp(1.8rem,5vw,3rem);margin:0 0 12px}.hero p{max-width:620px;line-height:1.6}.notice{background:#fff3d7;padding:12px 16px;border-radius:9px;margin:20px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:18px;margin:20px 0 45px}.card{background:white;border:1px solid #e1e9e2;border-radius:16px;padding:20px;display:flex;flex-direction:column}.emoji{font-size:3rem;background:var(--light);border-radius:12px;text-align:center;padding:25px}.card h3{margin-bottom:4px}.card p{flex:1;color:#52645a}.price{font-size:1.25rem;font-weight:700;margin:12px 0}aside{display:none;position:fixed;right:0;top:0;bottom:0;width:min(390px,100%);background:white;box-shadow:0 0 0 100vmax #0007;padding:22px;overflow:auto;z-index:10}aside.open{display:block}aside li{padding:9px 0}aside button{padding:10px;border:1px solid #ddd;border-radius:7px;background:white;cursor:pointer}footer{background:#193f31;color:white;padding:28px 6%;text-align:center}a{color:inherit}
-</style></head><body>
-<header><h1>🐾 PetNova Portugal</h1><button onclick="toggleCart()">🛒 Carrinho (<span id="count">0</span>)</button></header>
-<main><section class="hero"><h2>Tudo para os teus melhores amigos 🐶🐱</h2><p>Descobre ideias de acessórios práticos para cães e gatos. Estamos a preparar a nossa loja para Portugal.</p></section>
-<div class="notice" role="status"><strong>Loja de demonstração:</strong> os produtos e preços são ilustrativos. Não aceitamos encomendas nem pagamentos nesta fase.</div>
-<h2>Os nossos produtos</h2><section class="grid" id="products"></section></main>
-<aside id="cart" aria-label="Carrinho de demonstração"><button onclick="toggleCart()" style="float:right">Fechar ✕</button><h2>O teu carrinho</h2><ul id="items"></ul><p><strong>Total: <span id="total">0,00 €</span></strong></p><p>Esta é uma simulação. A compra está desativada.</p><button disabled>Finalizar compra (indisponível)</button><p><button onclick="clearCart()">Limpar carrinho</button></p></aside>
-<footer>PetNova Portugal · Projeto em demonstração · Sem vendas ativas</footer>
-<script>
-const products=[
-{name:"Escova para remover pelos",price:14.90,icon:"🐈",description:"Uma opção prática para a rotina de escovagem."},
-{name:"Brinquedo interativo para gatos",price:12.90,icon:"🐱",description:"Ideia de brincadeira e enriquecimento ambiental."},
-{name:"Tapete para comedouros",price:11.90,icon:"🐾",description:"Ajuda a organizar a zona das refeições."},
-{name:"Bebedouro portátil para cães",price:16.90,icon:"🐕",description:"Para levar água nos passeios."},
-{name:"Removedor de pelos reutilizável",price:9.90,icon:"🧹",description:"Para ajudar a retirar pelos de tecidos."}
-];
-let cart=[];const eur=n=>n.toLocaleString("pt-PT",{style:"currency",currency:"EUR"});
-document.getElementById("products").innerHTML=products.map((p,i)=>'<article class="card"><div class="emoji" aria-hidden="true">'+p.icon+'</div><h3>'+p.name+'</h3><p>'+p.description+'</p><div class="price">'+eur(p.price)+'</div><button onclick="add('+i+')">Adicionar ao carrinho</button></article>').join("");
-function add(i){cart.push(i);render();}function render(){document.getElementById("count").textContent=cart.length;document.getElementById("items").innerHTML=cart.length?cart.map(i=>"<li>"+products[i].name+" — "+eur(products[i].price)+"</li>").join(""):"<li>O carrinho está vazio.</li>";document.getElementById("total").textContent=eur(cart.reduce((s,i)=>s+products[i].price,0));}
-function toggleCart(){document.getElementById("cart").classList.toggle("open");render();}function clearCart(){cart=[];render();}render();
-</script></body></html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="PetNova Portugal: ideias para a vida com cães e gatos. Explora o nosso catálogo de demonstração. Ainda não aceitamos encomendas nem pagamentos.">
+  <meta name="theme-color" content="#204e3c">
+  <title>PetNova Portugal · Uma vida mais feliz, juntos</title>
+  <link rel="icon" href="assets/petnova.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/store.css">
+  <script src="assets/store.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#catalogo">Saltar para o catálogo</a>
+  <div class="announcement">Um projeto a crescer, com eles. <strong>Loja em demonstração · sem vendas ativas</strong></div>
+  <header class="header">
+    <a class="brand" href="./" aria-label="PetNova Portugal, página inicial"><span class="brand-mark" aria-hidden="true">✳</span><span>petnova<small>PORTUGAL</small></span></a>
+    <nav aria-label="Navegação principal"><a href="#catalogo">O catálogo</a><a href="#projeto">O projeto</a></nav>
+    <button class="cart-button" id="open-cart" aria-haspopup="dialog">O meu carrinho <span id="count">0</span></button>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow">PEQUENAS IDEIAS. GRANDES AMIZADES.</p><h1 id="hero-title">A vida é melhor<br>com <em>eles.</em></h1><p>Para os passeios sem pressa, as brincadeiras pela casa e todos os momentos pelo meio. Estamos a preparar a PetNova para os teus melhores amigos.</p><a class="primary-link" href="#catalogo">Explorar o catálogo <span aria-hidden="true">↗</span></a><span class="hero-note">Feito a pensar em cães, gatos e nas suas pessoas.</span></div>
+      <div class="hero-art"><img src="assets/petnova.svg" alt="Ilustração de um cão e um gato sentados juntos" width="640" height="580"><span class="art-note">Duas personalidades. Uma família.</span></div>
+    </section>
+    <section class="demo-notice" aria-label="Estado da loja"><span aria-hidden="true">◌</span><p><strong>Ainda estamos a preparar tudo.</strong> Este catálogo é uma demonstração. Os produtos, imagens e preços são ilustrativos; não aceitamos encomendas nem pagamentos.</p></section>
+    <section id="catalogo" class="catalog" aria-labelledby="catalog-title">
+      <div class="section-heading"><div><p class="eyebrow">PARA O DIA A DIA DELES</p><h2 id="catalog-title">Pequenos cuidados,<br>bons momentos.</h2></div><p>Conhece as ideias do nosso catálogo.<br>Disponibilidade e características por confirmar.</p></div>
+      <div class="filters" role="group" aria-label="Filtrar o catálogo"><button data-filter="Todos" aria-pressed="true">Todos</button><button data-filter="Cães" aria-pressed="false">Cães</button><button data-filter="Gatos" aria-pressed="false">Gatos</button><button data-filter="Casa" aria-pressed="false">Para a casa</button></div>
+      <p id="catalog-status" class="sr-only" role="status" aria-live="polite">A carregar o catálogo.</p><div class="grid" id="products"></div>
+      <noscript><p>Ativa o JavaScript para explorar os produtos e o carrinho de demonstração. As compras estão desativadas.</p></noscript>
+    </section>
+    <section id="projeto" class="about" aria-labelledby="about-title"><div><p class="eyebrow">OLÁ, SOMOS A PETNOVA</p><h2 id="about-title">Há muito carinho<br>nesta ideia.</h2></div><div><p>Queremos criar um espaço português de acessórios para cães e gatos, com informação clara e escolhas pensadas para a rotina de cada família.</p><p>Estamos a selecionar fornecedores e a preparar a loja. Até lá, podes explorar este protótipo e experimentar o carrinho, sem qualquer compromisso.</p><span class="status-pill">Em preparação · Portugal</span></div></section>
+    <section class="faq" aria-labelledby="faq-title"><h2 id="faq-title">Antes de explorar</h2><details><summary>Já posso fazer uma encomenda?</summary><p>Ainda não. O carrinho serve apenas para simular uma seleção. Não existe checkout, pagamento ou envio de encomendas.</p></details><details><summary>Os preços e imagens são reais?</summary><p>São exemplos. As ilustrações representam conceitos e não fotografias dos produtos. Os preços e as características finais dependem da confirmação dos fornecedores.</p></details><details><summary>Tenho de deixar os meus dados?</summary><p>Não. Este protótipo não pede nome, morada, email ou dados de pagamento. O carrinho funciona apenas enquanto tens a página aberta. Não usamos ferramentas de publicidade ou de análise de visitantes nesta versão. O alojamento pode tratar dados técnicos de acesso segundo a política do GitHub.</p></details></section>
+  </main>
+  <footer><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">✳</span><span>petnova<small>PORTUGAL</small></span></a><p>Uma vida mais feliz, juntos.</p><small>Projeto em demonstração · Sem vendas ativas</small><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Privacidade do alojamento</a></footer>
+  <dialog id="cart" aria-labelledby="cart-title"><div class="dialog-heading"><h2 id="cart-title">O teu carrinho <small>Simulação</small></h2><button id="close-cart" aria-label="Fechar carrinho">✕</button></div><p class="cart-info">Estás a experimentar a PetNova. Nenhuma encomenda será criada.</p><ul id="items"></ul><p class="cart-total">Total ilustrativo <strong id="total">0,00 €</strong></p><button class="checkout" id="checkout" type="button" disabled>Compras indisponíveis nesta demonstração</button><button class="clear" id="clear-cart" type="button">Limpar carrinho</button></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

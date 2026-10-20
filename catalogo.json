@@ -1,0 +1,51 @@
+{
+  "mode": "demonstracao",
+  "checkout_enabled": false,
+  "products": [
+    {
+      "id": "1",
+      "nome": "Escova para remover pelos",
+      "categoria": "Gatos",
+      "preco_demo_eur": "14.90",
+      "estado": "demonstracao",
+      "descricao": "Uma ideia de acessório para a rotina de escovagem.",
+      "tema": "escovagem"
+    },
+    {
+      "id": "2",
+      "nome": "Brinquedo interativo para gatos",
+      "categoria": "Gatos",
+      "preco_demo_eur": "12.90",
+      "estado": "demonstracao",
+      "descricao": "Uma ideia para momentos de brincadeira acompanhada.",
+      "tema": "brincadeira"
+    },
+    {
+      "id": "3",
+      "nome": "Tapete para comedouros",
+      "categoria": "Cães e gatos",
+      "preco_demo_eur": "11.90",
+      "estado": "demonstracao",
+      "descricao": "Uma ideia para organizar a zona das refeições.",
+      "tema": "refeicoes"
+    },
+    {
+      "id": "4",
+      "nome": "Bebedouro portátil para cães",
+      "categoria": "Cães",
+      "preco_demo_eur": "16.90",
+      "estado": "demonstracao",
+      "descricao": "Uma ideia de acessório para levar água nos passeios.",
+      "tema": "passeio"
+    },
+    {
+      "id": "5",
+      "nome": "Removedor de pelos reutilizável",
+      "categoria": "Casa",
+      "preco_demo_eur": "9.90",
+      "estado": "demonstracao",
+      "descricao": "Uma ideia de acessório para retirar pelos dos tecidos.",
+      "tema": "casa"
+    }
+  ]
+}
