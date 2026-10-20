@@ -4,7 +4,7 @@
 
 Python + Pillow + FFmpeg criam os anúncios, vídeos gráficos, legendas, guiões e calendário. GitHub Actions prepara um lote por dia em ambiente Linux, sem depender do teu computador. Não precisa de tokens nem envia conteúdo às plataformas.
 
-Ollama é opcional e corre localmente. Esta integração pede apenas um título em JSON; os avisos de demonstração, descrições e chamadas para conhecer o projeto usam texto controlado. Um modelo local, a sua licença, requisitos de memória e consumo do computador devem ser verificados antes da instalação. O resto da pipeline funciona sem ele.
+O workflow tenta executar Ollama com Qwen3 0.6B no runner Linux gratuito, com CPU. Descarrega o programa oficial e o modelo no ambiente temporário; em caso de falha continua sem IA. A instalação do modelo no teu PC é opcional. Esta integração pede apenas um título em JSON; os avisos de demonstração, descrições e chamadas para conhecer o projeto usam texto controlado. Um modelo local, a sua licença, requisitos de memória e consumo do computador devem ser verificados antes da instalação. O resto da pipeline funciona sem ele.
 
 ## YouTube
 
@@ -50,6 +50,8 @@ A rotina `scripts/rotina_diaria.py` gera o dia uma vez e percorre a fila já exi
 
 ## Fontes oficiais verificadas em 20 de outubro de 2026
 
+- [Qwen3 0.6B: modelo e licença Apache 2.0](https://ollama.com/library/qwen3:0.6b)
+- [Instalação Linux Ollama](https://docs.ollama.com/linux)
 - [Ollama Chat API](https://docs.ollama.com/api/chat)
 - [YouTube OAuth para aplicações instaladas](https://developers.google.com/youtube/data/guides/auth/installed-apps)
 - [YouTube videos.insert](https://developers.google.com/youtube/data/reference/rest/v3/videos/insert)

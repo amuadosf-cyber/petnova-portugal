@@ -15,16 +15,18 @@ Loja portuguesa de acessórios para cães e gatos, **em demonstração**. Não e
 | Vídeos | MP4 1080 × 1920, H.264, 24 segundos, quatro cenas animadas, pista AAC silenciosa |
 | Legendas e guiões | TikTok, Instagram e YouTube; SRT e calendário diário |
 | Preparação diária | GitHub Actions, dois rascunhos por dia, sem depender do PC |
-| IA | Ollama local opcional para o título; sem ele usa modelos de texto, identificados como tal |
+| IA | Qwen3 via Ollama no runner gratuito para assistir os títulos; Ollama no PC é opcional; fallback identificado para modelos de texto |
 | YouTube e Instagram | Adaptadores oficiais implementados e testados com respostas simuladas; contas por ligar |
 | TikTok | Exportação dos ficheiros para publicação/agendamento nativo; sem envio automático |
 | Publicações reais | Desativadas; nenhum acesso às contas é incluído no site |
 
-Os vídeos atuais são **vídeos gráficos com ilustrações originais**, não filmagens geradas por IA. O exemplo público foi criado sem Ollama. A integração de IA foi testada com respostas simuladas e falhas de ligação; não foi executado um modelo real neste ambiente. Não existe serviço gratuito de geração de filmagens integrado nesta versão.
+Os vídeos atuais são **vídeos gráficos com ilustrações originais**, não filmagens geradas por IA. O exemplo público foi criado sem Ollama. A integração de IA tem testes com respostas simuladas e falhas de ligação. Consulta o manifesto de cada execução para saber se foi usada IA real (`ai_used: true`) ou um modelo de texto (`ai_used: false`). Não existe serviço gratuito de geração de filmagens integrado nesta versão.
 
 A criação de anúncios não compra publicidade nem inicia campanhas pagas.
 
 ## Automação no GitHub, sem PC
+
+O workflow tenta preparar Ollama e o modelo gratuito **Qwen3 0.6B** no próprio runner, usando CPU e sem enviar dados a uma API paga. Se a preparação falhar ou a resposta for rejeitada, continua com modelos de texto; o manifesto identifica o gerador usado. O modelo é descarregado no runner temporário, não no teu PC. Na execução manual podes desmarcar **usar_ia**; a variável de repositório `PETNOVA_IA_ENABLED=false` desativa a preparação de IA nos agendamentos.
 
 O workflow `Criar 2 conteudos diarios (demonstracao)` executa diariamente às **07:17 UTC**, prepara os dois conteúdos para 12:30 e 19:30 de **Europe/Lisbon**, verifica os ficheiros e simula as três redes. Os horários do calendário adaptam-se ao horário de verão; o cron é UTC. São horários de planeamento, **não publicações agendadas nas redes**.
 
@@ -57,7 +59,7 @@ python automacao_conteudos.py --dia 2026-10-21
 python automacao_conteudos.py --ia ollama --modelo NOME_DO_MODELO --saida conteudos-ia
 ```
 
-A aplicação não instala nem descarrega modelos automaticamente. Se o Ollama falhar, grava um aviso de fallback no manifesto e usa texto por modelo. Só são aceites ligações ao próprio computador; não há fallback para API paga. As sugestões de IA passam por validação limitada e continuam a exigir revisão humana.
+O comando Python local não instala nem descarrega modelos automaticamente. O workflow GitHub prepara o modelo no seu ambiente temporário. Se o Ollama falhar, grava um aviso de fallback no manifesto e usa texto por modelo. Só são aceites ligações ao próprio computador; não há fallback para API paga. As sugestões de IA passam por validação limitada e continuam a exigir revisão humana.
 
 Para geração diária num PC Windows, executa `scripts/agendar_windows.ps1` no PowerShell. Cria a tarefa **PetNova-Conteudos-Demo** às 09:15 da hora local do Windows, em simulação, para o utilizador atual. O PC precisa de estar ligado e de ter as dependências instaladas; o script não foi executado num Windows nesta sessão. Podes remover a tarefa pelo Agendador de Tarefas. Não é necessário usar esta opção se usares apenas o GitHub Actions.
 

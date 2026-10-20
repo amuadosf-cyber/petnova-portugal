@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '17 7 * * *'
   workflow_dispatch:
+    inputs:
+      usar_ia:
+        description: 'Assistir os títulos com Qwen3 local no runner (sem API paga)'
+        type: boolean
+        default: true
   push:
     branches: [main]
     paths:
@@ -34,8 +39,27 @@ jobs:
             sudo apt-get update
             sudo apt-get install -y ffmpeg fonts-dejavu-core
           fi
+      - name: Preparar IA local gratuita no runner
+        id: ia
+        if: ${{ vars.PETNOVA_IA_ENABLED != 'false' && (github.event_name != 'workflow_dispatch' || inputs.usar_ia) }}
+        continue-on-error: true
+        timeout-minutes: 6
+        run: |
+          mkdir -p "$RUNNER_TEMP/petnova-ollama"
+          curl --fail --location --max-time 180 https://ollama.com/download/ollama-linux-amd64.tar.zst --output "$RUNNER_TEMP/petnova-ollama/package.tar.zst"
+          tar --zstd -xf "$RUNNER_TEMP/petnova-ollama/package.tar.zst" -C "$RUNNER_TEMP/petnova-ollama"
+          "$RUNNER_TEMP/petnova-ollama/bin/ollama" serve > "$RUNNER_TEMP/petnova-ollama/serve.log" 2>&1 &
+          python scripts/esperar_ollama.py
+          timeout 180 "$RUNNER_TEMP/petnova-ollama/bin/ollama" pull qwen3:0.6b
       - name: Gerar dois anuncios e videos verticais
-        run: python automacao_conteudos.py
+        env:
+          PETNOVA_AI_READY: ${{ steps.ia.outcome }}
+        run: |
+          if [ "$PETNOVA_AI_READY" = 'success' ]; then
+            python automacao_conteudos.py --ia ollama --modelo qwen3:0.6b
+          else
+            python automacao_conteudos.py
+          fi
       - name: Verificar MP4 e simular as tres redes (sem credenciais)
         run: |
           python scripts/validar_media.py

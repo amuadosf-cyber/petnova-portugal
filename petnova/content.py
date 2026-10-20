@@ -97,7 +97,9 @@ def assisted_hook(product, config, opener=None):
         raise ValueError("Endereço Ollama inválido.")
     if not settings.get("ollama_model"):
         raise ValueError("Define um modelo já instalado no Ollama.")
-    payload = {"model": settings["ollama_model"], "stream": False, "format": "json", "messages": [
+    payload = {"model": settings["ollama_model"], "stream": False, "think": False,
+               "options": {"num_ctx": 2048, "num_predict": 120, "temperature": 0.6},
+               "format": "json", "messages": [
         {"role": "system", "content": "Escreve em português de Portugal. Responde apenas com JSON {\"hook\":\"...\"}. Cria um título criativo com 4 a 9 palavras para um conceito de acessório. Sem promessas, preços, descontos, superlativos, testemunhos ou pedidos de compra. O produto não foi testado e a loja é de demonstração."},
         {"role": "user", "content": json.dumps({"produto": product["nome"], "tema": product["tema"]}, ensure_ascii=False)},
     ]}

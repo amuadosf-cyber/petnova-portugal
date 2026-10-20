@@ -5,6 +5,7 @@ __pycache__/
 .env.*
 !.env.example
 conteudos/
+conteudos-*/
 state/
 *.sqlite3*
 *.log
