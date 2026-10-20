@@ -98,10 +98,10 @@ def assisted_hook(product, config, opener=None):
     if not settings.get("ollama_model"):
         raise ValueError("Define um modelo já instalado no Ollama.")
     payload = {"model": settings["ollama_model"], "stream": False, "think": False,
-               "options": {"num_ctx": 2048, "num_predict": 120, "temperature": 0.6},
+               "options": {"num_ctx": 2048, "num_predict": 120, "temperature": 0.4},
                "format": "json", "messages": [
-        {"role": "system", "content": "Escreve em português de Portugal. Responde apenas com JSON {\"hook\":\"...\"}. Cria um título criativo com 4 a 9 palavras para um conceito de acessório. Sem promessas, preços, descontos, superlativos, testemunhos ou pedidos de compra. O produto não foi testado e a loja é de demonstração."},
-        {"role": "user", "content": json.dumps({"produto": product["nome"], "tema": product["tema"]}, ensure_ascii=False)},
+        {"role": "system", "content": "Escreve em português de Portugal. Responde apenas com JSON {\"hook\":\"...\"}. Cria um título afetivo curto, com 4 a 9 palavras e menos de 75 caracteres, relacionado com o contexto fornecido. Não inventes outro produto, divisão da casa, material ou característica. Exemplos de estilo: Um momento de cuidado e companhia; A tua casa, a companhia deles; Água para acompanhar o próximo passeio. Sem promessas, preços, descontos, descrições de design, superlativos, testemunhos ou pedidos de compra. O produto não foi testado e a loja é de demonstração."},
+        {"role": "user", "content": json.dumps({"produto": product["nome"], "contexto": IDEAS[product["tema"]][2], "tema": product["tema"]}, ensure_ascii=False)},
     ]}
     request = Request(settings["ollama_url"].rstrip("/") + "/api/chat",
                       json.dumps(payload).encode(), {"Content-Type": "application/json"})
@@ -111,9 +111,9 @@ def assisted_hook(product, config, opener=None):
     if not isinstance(hook, str):
         raise ValueError("Título de IA inválido.")
     hook = hook.strip()
-    if not 8 <= len(hook) <= 85 or len(hook.split()) > 12:
+    if not 8 <= len(hook) <= 85 or not 4 <= len(hook.split()) <= 9:
         raise ValueError("Título de IA fora dos limites.")
-    forbidden = r"https?://|[<>{}\n\r€%\d]|grátis|garanti|cura|compr[ae]|desconto|stock|entrega|melhor|perfeit|segur[oa]|aprova|veterin|elimin|resultad"
+    forbidden = r"https?://|[<>{}\n\r€%\d]|grátis|garanti|cura|compr[ae]|desconto|stock|entrega|melhor|perfeit|segur[oa]|aprova|veterin|elimin|resultad|design|funcional|premium|cozinha|durável"
     if re.search(forbidden, hook, re.IGNORECASE):
         raise ValueError("Título de IA rejeitado pela verificação de alegações.")
     return hook

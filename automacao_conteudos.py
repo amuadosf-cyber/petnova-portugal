@@ -79,6 +79,8 @@ def main():
     day = args.dia or datetime.now(ZoneInfo(config["content"]["timezone"])).date().isoformat()
     path, manifest = generate(config, day, args.saida, videos=not args.sem_video)
     print(f"{len(manifest['posts'])} rascunhos preparados em {path}. Nenhuma publicação enviada.")
+    used = sum(bool(post["generation"]["ai_used"]) for post in manifest["posts"])
+    print(f"IA usada em {used} de {len(manifest['posts'])} rascunhos. Restantes: modelos de texto. Revisão pendente.")
 
 
 if __name__ == "__main__":

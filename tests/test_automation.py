@@ -75,7 +75,7 @@ class TestContent(unittest.TestCase):
 
     def test_ai_claims_are_rejected(self):
         self.config['content']['ollama_model'] = 'test'
-        for hook in ('Entrega grátis garantida', 'Compra agora com 50% de desconto', '<script>alert</script>', 'Cura todos os problemas'):
+        for hook in ('Entrega grátis garantida', 'Compra agora com 50% de desconto', '<script>alert</script>', 'Cura todos os problemas', 'Acessório para a cozinha com design moderno e funcional'):
             data = json.dumps({'message': {'content': json.dumps({'hook': hook})}}).encode()
             with self.subTest(hook=hook), self.assertRaises(ValueError):
                 assisted_hook(self.products[0], self.config, lambda *a, **k: io.BytesIO(data))

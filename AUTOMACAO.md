@@ -63,4 +63,4 @@ A rotina `scripts/rotina_diaria.py` gera o dia uma vez e percorre a fila já exi
 - [Agendamentos GitHub Actions](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
 - [Faturação GitHub Actions](https://docs.github.com/en/billing/concepts/product-billing/github-actions)
 
-Limites, permissões e planos podem mudar. Nenhum envio real ou autenticação nestas três redes foi testado nesta sessão. Os testes de integração usam respostas simuladas; a renderização de anúncios e MP4 foi executada de verdade.
+Limites, permissões e planos podem mudar. Nenhum envio real ou autenticação nestas três redes foi testado nesta sessão. Os testes de integração com as redes sociais usam respostas simuladas; a renderização de anúncios e MP4 foi executada de verdade.
