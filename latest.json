@@ -1,50 +1,50 @@
 {
   "schema_version": 1,
-  "date": "2026-11-18",
-  "generated_at": "2026-11-18T16:27:44.962339+00:00",
+  "date": "2026-11-19",
+  "generated_at": "2026-11-19T16:34:35.442397+00:00",
   "timezone": "Europe/Lisbon",
   "mode": "demonstracao",
   "social_publishing_enabled": false,
-  "release_tag": "rascunhos-2026-11-18-r44347222059-a1",
-  "source_url": "https://github.com/amuadosf-cyber/petnova-portugal/releases/tag/rascunhos-2026-11-18-r44347222059-a1",
-  "bundle_url": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-18-r44347222059-a1/petnova-2026-11-18.zip",
+  "release_tag": "rascunhos-2026-11-19-r44567344507-a1",
+  "source_url": "https://github.com/amuadosf-cyber/petnova-portugal/releases/tag/rascunhos-2026-11-19-r44567344507-a1",
+  "bundle_url": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-19-r44567344507-a1/petnova-2026-11-19.zip",
   "posts": [
     {
-      "id": "2026-11-18-1230-p2",
-      "product_name": "Brinquedo interativo para gatos",
-      "hook": "Tempo para brincar?",
-      "scheduled_at": "2026-11-18T12:30:00+00:00",
-      "status": "rascunho",
-      "ai_used": false,
-      "captions": {
-        "tiktok": "Tempo para brincar?\n\nBrinquedo interativo para gatos — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=2026-11-18-1230-p2\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao",
-        "instagram": "Tempo para brincar?\n\nBrinquedo interativo para gatos — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=instagram&utm_medium=organic_social&utm_campaign=2026-11-18-1230-p2\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao",
-        "youtube": "Tempo para brincar?\n\nBrinquedo interativo para gatos — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=youtube&utm_medium=organic_social&utm_campaign=2026-11-18-1230-p2\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao"
-      },
-      "media": {
-        "video": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-18-r44347222059-a1/2026-11-18-1230-p2.mp4",
-        "ad": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-18-r44347222059-a1/2026-11-18-1230-p2.png",
-        "subtitles": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-18-r44347222059-a1/2026-11-18-1230-p2.srt",
-        "vtt": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-18-r44347222059-a1/2026-11-18-1230-p2.vtt"
-      }
-    },
-    {
-      "id": "2026-11-18-1930-p3",
-      "product_name": "Tapete para comedouros",
-      "hook": "Organiza o espaço para refeições",
-      "scheduled_at": "2026-11-18T19:30:00+00:00",
+      "id": "2026-11-19-1230-p4",
+      "product_name": "Bebedouro portátil para cães",
+      "hook": "A sua lista de passeios",
+      "scheduled_at": "2026-11-19T12:30:00+00:00",
       "status": "rascunho",
       "ai_used": true,
       "captions": {
-        "tiktok": "Organiza o espaço para refeições\n\nTapete para comedouros — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=2026-11-18-1930-p3\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao",
-        "instagram": "Organiza o espaço para refeições\n\nTapete para comedouros — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=instagram&utm_medium=organic_social&utm_campaign=2026-11-18-1930-p3\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao",
-        "youtube": "Organiza o espaço para refeições\n\nTapete para comedouros — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=youtube&utm_medium=organic_social&utm_campaign=2026-11-18-1930-p3\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao"
+        "tiktok": "A sua lista de passeios\n\nBebedouro portátil para cães — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=2026-11-19-1230-p4\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao",
+        "instagram": "A sua lista de passeios\n\nBebedouro portátil para cães — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=instagram&utm_medium=organic_social&utm_campaign=2026-11-19-1230-p4\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao",
+        "youtube": "A sua lista de passeios\n\nBebedouro portátil para cães — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=youtube&utm_medium=organic_social&utm_campaign=2026-11-19-1230-p4\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao"
       },
       "media": {
-        "video": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-18-r44347222059-a1/2026-11-18-1930-p3.mp4",
-        "ad": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-18-r44347222059-a1/2026-11-18-1930-p3.png",
-        "subtitles": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-18-r44347222059-a1/2026-11-18-1930-p3.srt",
-        "vtt": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-18-r44347222059-a1/2026-11-18-1930-p3.vtt"
+        "video": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-19-r44567344507-a1/2026-11-19-1230-p4.mp4",
+        "ad": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-19-r44567344507-a1/2026-11-19-1230-p4.png",
+        "subtitles": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-19-r44567344507-a1/2026-11-19-1230-p4.srt",
+        "vtt": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-19-r44567344507-a1/2026-11-19-1230-p4.vtt"
+      }
+    },
+    {
+      "id": "2026-11-19-1930-p5",
+      "product_name": "Removedor de pelos reutilizável",
+      "hook": "Acessório para a rotina da casa",
+      "scheduled_at": "2026-11-19T19:30:00+00:00",
+      "status": "rascunho",
+      "ai_used": true,
+      "captions": {
+        "tiktok": "Acessório para a rotina da casa\n\nRemovedor de pelos reutilizável — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=2026-11-19-1930-p5\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao",
+        "instagram": "Acessório para a rotina da casa\n\nRemovedor de pelos reutilizável — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=instagram&utm_medium=organic_social&utm_campaign=2026-11-19-1930-p5\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao",
+        "youtube": "Acessório para a rotina da casa\n\nRemovedor de pelos reutilizável — um conceito do nosso catálogo.\nLoja em demonstração. Não aceitamos encomendas nem pagamentos.\n\nConhece o projeto: https://amuadosf-cyber.github.io/petnova-portugal/?utm_source=youtube&utm_medium=organic_social&utm_campaign=2026-11-19-1930-p5\n#PetNovaPortugal #CaesEGatos #AnimaisDeEstimacao"
+      },
+      "media": {
+        "video": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-19-r44567344507-a1/2026-11-19-1930-p5.mp4",
+        "ad": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-19-r44567344507-a1/2026-11-19-1930-p5.png",
+        "subtitles": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-19-r44567344507-a1/2026-11-19-1930-p5.srt",
+        "vtt": "https://github.com/amuadosf-cyber/petnova-portugal/releases/download/rascunhos-2026-11-19-r44567344507-a1/2026-11-19-1930-p5.vtt"
       }
     }
   ]
